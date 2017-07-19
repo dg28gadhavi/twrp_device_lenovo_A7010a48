@@ -1,2 +1,2 @@
-add_lunch_combo omni_a7010a48-userdebug
-add_lunch_combo omni_a7010a48-eng
+add_lunch_combo omni_A7010a48-userdebug
+add_lunch_combo omni_A7010a48-eng
