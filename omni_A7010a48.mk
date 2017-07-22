@@ -20,6 +20,16 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
+# Properties
+	PRODUCT_PROPERTY_OVERRIDES += \
+	    ro.sys.fw.dex2oat_thread_count=4
+
+#Dex2oat Limits
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=6 \
+    dalvik.vm.image-dex2oat-threads=8
+
 # TWRP
 PRODUCT_COPY_FILES += \
           $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
