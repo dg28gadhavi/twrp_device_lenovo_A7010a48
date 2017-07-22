@@ -36,9 +36,9 @@ allow untrusted_app guiext-server:binder { transfer call };
 # Date : 2016/07/12
 # Operation : SQC
 # Purpose : allow untrusted_app access ntfs device
-#allow untrusted_app fuseblk:dir search;
-#allow untrusted_app fuseblk:file read;
-#allow untrusted_app fuseblk:file rw_file_perms;
+allow untrusted_app fuseblk:dir search;
+allow untrusted_app fuseblk:file read;
+allow untrusted_app fuseblk:file rw_file_perms;
 
 # Date : 2016/7/22
 # Operation: SQC
@@ -133,3 +133,7 @@ allow untrusted_app embms_library_file:file {read getattr open};
 # Operator: New feature for eMBMS middleware integration
 # Purpose: allow vendor's eMBMS middleware APK to send AT-command via embmsd local socket
 unix_socket_connect(untrusted_app, rild_embms, rilproxy)
+
+# AVC  Denial Fixes
+allow untrusted_app sysfs:dir { read };
+allow untrusted_app mnt_media_rw_file:dir { getattr };
