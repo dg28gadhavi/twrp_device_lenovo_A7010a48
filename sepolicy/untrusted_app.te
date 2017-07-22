@@ -36,9 +36,9 @@ allow untrusted_app guiext-server:binder { transfer call };
 # Date : 2016/07/12
 # Operation : SQC
 # Purpose : allow untrusted_app access ntfs device
-allow untrusted_app fuseblk:dir search;
-allow untrusted_app fuseblk:file read;
-allow untrusted_app fuseblk:file rw_file_perms;
+# allow untrusted_app fuseblk:dir search;
+# allow untrusted_app fuseblk:file read;
+# allow untrusted_app fuseblk:file rw_file_perms;
 
 # Date : 2016/7/22
 # Operation: SQC
