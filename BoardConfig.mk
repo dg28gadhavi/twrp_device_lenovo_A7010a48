@@ -23,6 +23,24 @@ TARGET_USES_64_BIT_BINDER := true
 
 MTK_K64_SUPPORT := yes
 
+# Properties
+	PRODUCT_PROPERTY_OVERRIDES += \
+	    ro.sys.fw.dex2oat_thread_count=4
+
+#Dex2oat Limits
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=6 \
+    dalvik.vm.image-dex2oat-threads=8
+    
+    # Recovery
+BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/recovery.fstab
+
+#TWRP_FSTAB
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Architecture Extensions
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_VFP := true

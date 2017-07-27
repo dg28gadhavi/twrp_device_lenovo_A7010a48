@@ -20,20 +20,6 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
-# Properties
-	PRODUCT_PROPERTY_OVERRIDES += \
-	    ro.sys.fw.dex2oat_thread_count=4
-
-#Dex2oat Limits
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.boot-dex2oat-threads=8 \
-    dalvik.vm.dex2oat-threads=6 \
-    dalvik.vm.image-dex2oat-threads=8
-
-# Recovery
-BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/recovery.fstab
-
 PRODUCT_RELEASE_NAME := Darkness
 PRODUCT_NAME := omni_A7010a48
 PRODUCT_DEVICE := A7010a48
