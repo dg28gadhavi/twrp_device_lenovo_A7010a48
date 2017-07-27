@@ -30,10 +30,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=6 \
     dalvik.vm.image-dex2oat-threads=8
 
-# TWRP
-PRODUCT_COPY_FILES += \
-          $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
-
 PRODUCT_RELEASE_NAME := Darkness
 PRODUCT_NAME := omni_A7010a48
 PRODUCT_DEVICE := A7010a48
