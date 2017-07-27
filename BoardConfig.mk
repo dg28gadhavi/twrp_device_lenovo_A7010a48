@@ -35,11 +35,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
     # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/lenovo/A7010a48/recovery/root/etc/recovery.fstab
 
 #TWRP_FSTAB
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+    device/lenovo/A7010a48/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Architecture Extensions
 TARGET_CPU_SMP := true
